@@ -36,7 +36,7 @@ class Kpi {
     color: Colors.white,
   );
   var textBigStyle = new TextStyle(
-    fontSize: 25.0,
+    fontSize: 30.0,
     color: Colors.white,
   );
 
@@ -47,7 +47,7 @@ class Kpi {
     this.colorGreen: 191,
     this.colorBlue: 63,
     this.colorOpacity: 1,
-    this.height = 150,
+    this.height = 180,
     firstLineIconPram = Icons.arrow_right,
     this.firstLineText = 'firstLineText',
     this.midLineTextLeft = '',

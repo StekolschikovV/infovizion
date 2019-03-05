@@ -31,11 +31,32 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   int _counter = 0;
   String testData = '['
-      '{ "background":"1,2,344,1","firstLineText": "Продажи", "midLineTextLeft":"", "midLineTextRight":"33.3 млн.руб","lastLineTextLeft":"105.3%","lastLineTextRight":"20.4 млн.руб"}, '
-      '{ "rotateIcon":"90","firstLineText": "john@example.com2"}, '
-      '{ "firstLineText": "john@example.com3"}, '
-      '{"icon": "33", "firstLineText": "john@example.com2"},'
-      '{"icon": "33", "midLineTextLeft": "midLineTextLeft3"}'
+      '{ "background":"27,161,226,1","firstLineText": "Продажи", "midLineTextLeft":"", "midLineTextRight":"33.3 млн.руб","lastLineTextLeft":"105.3%","lastLineTextRight":"20.4 млн.руб"}, '
+      '{ "rotateIcon":"90", "background":"204,102,119,1","firstLineText": "%Наценки", "midLineTextLeft":"", "midLineTextRight":"8.91 %","lastLineTextLeft":"89%","lastLineTextRight":"-1.8 млн.руб."}, '
+      '{ "background":"27,161,226,1","firstLineText": "Продажи", "midLineTextLeft":"", "midLineTextRight":"33.3 млн.руб","lastLineTextLeft":"105.3%","lastLineTextRight":"20.4 млн.руб"}, '
+      '{ "rotateIcon":"90", "background":"204,102,119,1","firstLineText": "%Наценки", "midLineTextLeft":"", "midLineTextRight":"8.91 %","lastLineTextLeft":"89%","lastLineTextRight":"-1.8 млн.руб."}, '
+      '{ "background":"27,161,226,1","firstLineText": "Продажи", "midLineTextLeft":"", "midLineTextRight":"33.3 млн.руб","lastLineTextLeft":"105.3%","lastLineTextRight":"20.4 млн.руб"}, '
+      '{ "rotateIcon":"90", "background":"204,102,119,1","firstLineText": "%Наценки", "midLineTextLeft":"", "midLineTextRight":"8.91 %","lastLineTextLeft":"89%","lastLineTextRight":"-1.8 млн.руб."}, '
+      '{ "background":"27,161,226,1","firstLineText": "Продажи", "midLineTextLeft":"", "midLineTextRight":"33.3 млн.руб","lastLineTextLeft":"105.3%","lastLineTextRight":"20.4 млн.руб"}, '
+      '{ "rotateIcon":"90", "background":"204,102,119,1","firstLineText": "%Наценки", "midLineTextLeft":"", "midLineTextRight":"8.91 %","lastLineTextLeft":"89%","lastLineTextRight":"-1.8 млн.руб."}, '
+      '{ "background":"27,161,226,1","firstLineText": "Продажи", "midLineTextLeft":"", "midLineTextRight":"33.3 млн.руб","lastLineTextLeft":"105.3%","lastLineTextRight":"20.4 млн.руб"}, '
+      '{ "rotateIcon":"90", "background":"204,102,119,1","firstLineText": "%Наценки", "midLineTextLeft":"", "midLineTextRight":"8.91 %","lastLineTextLeft":"89%","lastLineTextRight":"-1.8 млн.руб."}, '
+      '{ "background":"27,161,226,1","firstLineText": "Продажи", "midLineTextLeft":"", "midLineTextRight":"33.3 млн.руб","lastLineTextLeft":"105.3%","lastLineTextRight":"20.4 млн.руб"}, '
+      '{ "rotateIcon":"90", "background":"204,102,119,1","firstLineText": "%Наценки", "midLineTextLeft":"", "midLineTextRight":"8.91 %","lastLineTextLeft":"89%","lastLineTextRight":"-1.8 млн.руб."}, '
+      '{ "background":"27,161,226,1","firstLineText": "Продажи", "midLineTextLeft":"", "midLineTextRight":"33.3 млн.руб","lastLineTextLeft":"105.3%","lastLineTextRight":"20.4 млн.руб"}, '
+      '{ "rotateIcon":"90", "background":"204,102,119,1","firstLineText": "%Наценки", "midLineTextLeft":"", "midLineTextRight":"8.91 %","lastLineTextLeft":"89%","lastLineTextRight":"-1.8 млн.руб."}, '
+      '{ "background":"27,161,226,1","firstLineText": "Продажи", "midLineTextLeft":"", "midLineTextRight":"33.3 млн.руб","lastLineTextLeft":"105.3%","lastLineTextRight":"20.4 млн.руб"}, '
+      '{ "rotateIcon":"90", "background":"204,102,119,1","firstLineText": "%Наценки", "midLineTextLeft":"", "midLineTextRight":"8.91 %","lastLineTextLeft":"89%","lastLineTextRight":"-1.8 млн.руб."}, '
+      '{ "background":"27,161,226,1","firstLineText": "Продажи", "midLineTextLeft":"", "midLineTextRight":"33.3 млн.руб","lastLineTextLeft":"105.3%","lastLineTextRight":"20.4 млн.руб"}, '
+      '{ "rotateIcon":"90", "background":"204,102,119,1","firstLineText": "%Наценки", "midLineTextLeft":"", "midLineTextRight":"8.91 %","lastLineTextLeft":"89%","lastLineTextRight":"-1.8 млн.руб."}, '
+      '{ "background":"27,161,226,1","firstLineText": "Продажи", "midLineTextLeft":"", "midLineTextRight":"33.3 млн.руб","lastLineTextLeft":"105.3%","lastLineTextRight":"20.4 млн.руб"}, '
+      '{ "rotateIcon":"90", "background":"204,102,119,1","firstLineText": "%Наценки", "midLineTextLeft":"", "midLineTextRight":"8.91 %","lastLineTextLeft":"89%","lastLineTextRight":"-1.8 млн.руб."}, '
+      '{ "background":"27,161,226,1","firstLineText": "Продажи", "midLineTextLeft":"", "midLineTextRight":"33.3 млн.руб","lastLineTextLeft":"105.3%","lastLineTextRight":"20.4 млн.руб"}, '
+      '{ "rotateIcon":"90", "background":"204,102,119,1","firstLineText": "%Наценки", "midLineTextLeft":"", "midLineTextRight":"8.91 %","lastLineTextLeft":"89%","lastLineTextRight":"-1.8 млн.руб."}, '
+      '{ "background":"27,161,226,1","firstLineText": "Продажи", "midLineTextLeft":"", "midLineTextRight":"33.3 млн.руб","lastLineTextLeft":"105.3%","lastLineTextRight":"20.4 млн.руб"}, '
+      '{ "rotateIcon":"90", "background":"204,102,119,1","firstLineText": "%Наценки", "midLineTextLeft":"", "midLineTextRight":"8.91 %","lastLineTextLeft":"89%","lastLineTextRight":"-1.8 млн.руб."}, '
+      '{ "background":"27,161,226,1","firstLineText": "Продажи", "midLineTextLeft":"", "midLineTextRight":"33.3 млн.руб","lastLineTextLeft":"105.3%","lastLineTextRight":"20.4 млн.руб"}, '
+      '{ "rotateIcon":"90", "background":"204,102,119,1","firstLineText": "%Наценки", "midLineTextLeft":"", "midLineTextRight":"8.91 %","lastLineTextLeft":"89%","lastLineTextRight":"-1.8 млн.руб."} '
   ']';
 
   void _incrementCounter() {
@@ -47,11 +68,12 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
 
+    List<Widget> kpiList = [];
     List dataList = jsonDecode(testData);
 
-//    dataList.forEach((e){
-//      print(e['name']);
-//    });
+    dataList.forEach((e){
+      kpiList.add( Kpi(context, data: e).get());
+    });
 //    print(dataList.length);
 
     return Scaffold(
@@ -66,16 +88,17 @@ class _MyHomePageState extends State<MyHomePage> {
           child: Column(
             mainAxisSize: MainAxisSize.min,
             mainAxisAlignment: MainAxisAlignment.spaceAround,
-            children: <Widget>[
-//              Kpi(context, colorBlue: 0).get(),
-              Kpi(context, colorRed: 500, data: dataList[0]).get(),
-              Kpi(context, colorRed: 500, data: dataList[1]).get(),
-              Kpi(context, colorRed: 500, data: dataList[2]).get(),
-              Kpi(context, colorRed: 500, data: dataList[3]).get(),
-//              Kpi(context, colorGreen: 500).get(),
-//              Kpi(context, colorBlue: 1500).get(),
-//              Kpi(context, colorBlue: 500).get(),
-            ],
+            children: kpiList,
+//            children: <Widget>[
+////              Kpi(context, colorBlue: 0).get(),
+//              Kpi(context, colorRed: 500, data: dataList[0]).get(),
+//              Kpi(context, colorRed: 500, data: dataList[1]).get(),
+//              Kpi(context, colorRed: 500, data: dataList[2]).get(),
+//              Kpi(context, colorRed: 500, data: dataList[3]).get(),
+////              Kpi(context, colorGreen: 500).get(),
+////              Kpi(context, colorBlue: 1500).get(),
+////              Kpi(context, colorBlue: 500).get(),
+//            ],
           ),
         ),
       )
