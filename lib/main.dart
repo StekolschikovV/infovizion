@@ -36,6 +36,7 @@ class _MyHomePageState extends State<MyHomePage> {
         title: Text(widget.title),
       ),
       body: Center(
+
         child: Column(
 
           // horizontal).
@@ -43,7 +44,7 @@ class _MyHomePageState extends State<MyHomePage> {
           children: <Widget>[
 //            Kpi().build(context)
           Kpi(context).get(),
-          Kpi(context).get(),
+          Kpi(context, colorBlue: 500).get(),
 //            Container(
 //              margin: const EdgeInsets.all(10.0),
 //              color: const Color(0xFF00FF00),
