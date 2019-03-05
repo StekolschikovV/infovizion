@@ -42,7 +42,8 @@ class _MyHomePageState extends State<MyHomePage> {
           mainAxisAlignment: MainAxisAlignment.start,
           children: <Widget>[
 //            Kpi().build(context)
-          Kpi(context).get()
+          Kpi(context).get(),
+          Kpi(context).get(),
 //            Container(
 //              margin: const EdgeInsets.all(10.0),
 //              color: const Color(0xFF00FF00),

@@ -18,11 +18,23 @@ class Kpi {
   Widget get() {
     return Container(
       margin: const EdgeInsets.all(10.0),
-//      color: const Color('0xFF00FF00'),
+      padding: const EdgeInsets.all(10.0),
       color: Color.fromRGBO(colorRed, colorGreen, colorBlue, colorOpacity),
-//      width: MediaQuery.of(context).size.width,
       width: width,
       height: height,
+      child: Column(
+          children: <Widget>[
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: <Widget>[
+                Text('Row1'),
+                Text('Row2')
+              ],
+            )
+
+
+          ],
+      ),
     );
   }
 }
