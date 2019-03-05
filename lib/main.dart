@@ -1,7 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:infovizion/widgets/kpi.dart';
+import 'package:infovizion/widgets/kpi/kpi.dart';
 
-void main() => runApp(MyApp());
+
+void main() {
+  return runApp(MyApp());
+//  runApp(MyApp()
+}
+
+//void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
   @override
@@ -45,11 +51,11 @@ class _MyHomePageState extends State<MyHomePage> {
             mainAxisSize: MainAxisSize.min,
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: <Widget>[
-              Kpi(context, colorBlue: 0).get(),
+//              Kpi(context, colorBlue: 0).get(),
               Kpi(context, colorRed: 500).get(),
-              Kpi(context, colorGreen: 500).get(),
-              Kpi(context, colorBlue: 1500).get(),
-              Kpi(context, colorBlue: 500).get(),
+//              Kpi(context, colorGreen: 500).get(),
+//              Kpi(context, colorBlue: 1500).get(),
+//              Kpi(context, colorBlue: 500).get(),
             ],
           ),
         ),
