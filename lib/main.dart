@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:infovizion/widgets/kpi/kpi.dart';
+import 'dart:convert';
 
 
 void main() {
@@ -38,6 +39,14 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
+
+    List dataList = jsonDecode(testData);
+
+//    dataList.forEach((e){
+//      print(e['name']);
+//    });
+//    print(dataList.length);
+
     return Scaffold(
       appBar: AppBar(
         title: Text(widget.title),
@@ -52,7 +61,8 @@ class _MyHomePageState extends State<MyHomePage> {
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: <Widget>[
 //              Kpi(context, colorBlue: 0).get(),
-              Kpi(context, colorRed: 500).get(),
+              Kpi(context, colorRed: 500, data: dataList[0]).get(),
+              Kpi(context, colorRed: 500, data: dataList[1]).get(),
 //              Kpi(context, colorGreen: 500).get(),
 //              Kpi(context, colorBlue: 1500).get(),
 //              Kpi(context, colorBlue: 500).get(),
@@ -92,3 +102,9 @@ class _MyHomePageState extends State<MyHomePage> {
     );
   }
 }
+
+
+String testData = '['
+    '{ "firstLineText": "john@example.com"}, '
+    '{"icon": "33", "firstLineText": "firstLineText", "midLineTextRight": "midLineTextRight"},'
+    ']';

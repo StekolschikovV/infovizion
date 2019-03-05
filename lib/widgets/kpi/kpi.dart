@@ -27,6 +27,8 @@ class Kpi {
   String lastLineTextLeft;
   String lastLineTextRight;
 
+  var data;
+
   var textStyle = new TextStyle(
     fontSize: 20.0,
     color: Colors.white,
@@ -38,6 +40,7 @@ class Kpi {
 
   Kpi(
     BuildContext context, {
+      this.data,
     this.colorRed: 63,
     this.colorGreen: 191,
     this.colorBlue: 63,
@@ -50,49 +53,17 @@ class Kpi {
     this.lastLineTextLeft = 'lineLineTextLeft',
     this.lastLineTextRight = 'lineLineTextRight',
   }) {
-//    loadStudent();
-
-//    initializeReflectable();
-//    String json = '{ "name":"John", "age":30, "car":null }';
-//    JsonParser parser = new JsonParser();
-//    DataClass instance = parser.parseJson<DataClass>(json);
-//    print(instance.name);
 
 
-//    TextEditingValue.fromJSON(encoded)
-//    String form = json.encode([
-//      {
-//        'type': 'Input',
-//        'title': 'Hi Group',
-//        'placeholder': "Hi Group flutter"
-//      },
-//      {
-//        'type': 'Password',
-//        'title': 'Password',
-//      },
-//      {
-//        'type': 'Email',
-//        'title': 'Email test',
-//        'placeholder': "hola a todos"
-//      },
-//      {
-//        'type': 'TareaText',
-//        'title': 'TareaText test',
-//        'placeholder': "hola a todos"
-//      },
-//    ]);
-//
-
-
-  String test = '[{"name": "John Smith", "email": "john@example.com"},  {"name": "John ", "email": "john@example.com"}]';
+//  String test = '[{"name": "John Smith", "email": "john@example.com"},  {"name": "John ", "email": "john@example.com"}]';
 //  Map ss = jsonDecode(test)[0];
 //  print(ss['name']);
 
-    List dataList = jsonDecode(test);
+//    List dataList = jsonDecode(test);
 
-    dataList.forEach((e){
-      print(e['name']);
-    });
+//    dataList.forEach((e){
+//      print(e['name']);
+//    });
 
 //    Map<String, dynamic> user = jsonDecode('{"name": "John Smith", "email": "john@example.com"}');
 //    Map<String, dynamic> user = jsonDecode();
@@ -116,7 +87,7 @@ class Kpi {
 
 
 //    print(myThing[0]);
-    print('---------------');
+//    print('---------------');
 
 
 
@@ -126,8 +97,21 @@ class Kpi {
 
     width = MediaQuery.of(context).size.width;
     firstLineIcon = Icon(firstLineIconPram, color: Colors.white,);
+
+    useData();
   }
 
+  void useData(){
+    if(data != null){
+//      print(data);
+//      print(data['icon'] == null);
+      firstLineText = data['firstLineText'] != null ? data['firstLineText'] : '';
+      midLineTextLeft = data['midLineTextLeft'] != null ? data['midLineTextLeft'] : '';
+      midLineTextRight = data['midLineTextRight'] != null ? data['midLineTextRight'] : '';
+      lastLineTextLeft = data['lastLineTextLeft'] != null ? data['lastLineTextLeft'] : '';
+      lastLineTextRight = data['lastLineTextRight'] != null ? data['lastLineTextRight'] : '';
+    }
+  }
 
   Widget get() {
     return Container(
@@ -159,17 +143,17 @@ class Kpi {
     );
   }
 }
-class MyClass{
-  String name;
-  String email;
-  MyClass(String data){
-    print(data);
-//        Map<String, dynamic> user = jsonDecode('{"name": "John Smith", "email": "john@example.com"}');
-//        Map<String, dynamic> user = jsonDecode(data);
-
-//        print(user);
-//    Map<String, dynamic> user = jsonDecode(data);
-//    print(jsonDecode(data));
-  }
-
-}
+//class MyClass{
+//  String name;
+//  String email;
+//  MyClass(String data){
+//    print(data);
+////        Map<String, dynamic> user = jsonDecode('{"name": "John Smith", "email": "john@example.com"}');
+////        Map<String, dynamic> user = jsonDecode(data);
+//
+////        print(user);
+////    Map<String, dynamic> user = jsonDecode(data);
+////    print(jsonDecode(data));
+//  }
+//
+//}
