@@ -30,6 +30,13 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   int _counter = 0;
+  String testData = '['
+      '{ "background":"1,2,344,1","firstLineText": "Продажи", "midLineTextLeft":"", "midLineTextRight":"33.3 млн.руб","lastLineTextLeft":"105.3%","lastLineTextRight":"20.4 млн.руб"}, '
+      '{ "firstLineText": "john@example.com2"}, '
+      '{ "firstLineText": "john@example.com3"}, '
+      '{"icon": "33", "firstLineText": "john@example.com2"},'
+      '{"icon": "33", "midLineTextLeft": "midLineTextLeft3"}'
+  ']';
 
   void _incrementCounter() {
     setState(() {
@@ -63,6 +70,8 @@ class _MyHomePageState extends State<MyHomePage> {
 //              Kpi(context, colorBlue: 0).get(),
               Kpi(context, colorRed: 500, data: dataList[0]).get(),
               Kpi(context, colorRed: 500, data: dataList[1]).get(),
+              Kpi(context, colorRed: 500, data: dataList[2]).get(),
+              Kpi(context, colorRed: 500, data: dataList[3]).get(),
 //              Kpi(context, colorGreen: 500).get(),
 //              Kpi(context, colorBlue: 1500).get(),
 //              Kpi(context, colorBlue: 500).get(),
@@ -104,7 +113,11 @@ class _MyHomePageState extends State<MyHomePage> {
 }
 
 
-String testData = '['
-    '{ "firstLineText": "john@example.com"}, '
-    '{"icon": "33", "firstLineText": "firstLineText", "midLineTextRight": "midLineTextRight"},'
-    ']';
+//String testData = '['
+//    '{ "firstLineText": "john@example.com1"}, '
+//    '{ "firstLineText": "john@example.com1"}, '
+//    '{ "firstLineText": "john@example.com1"}, '
+//    '{"icon": "33", "firstLineText": "john@example.com2"},'
+//    '{"icon": "33", "midLineTextLeft": "midLineTextLeft3"}'
+//
+//    ']';

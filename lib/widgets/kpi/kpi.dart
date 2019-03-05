@@ -110,14 +110,23 @@ class Kpi {
       midLineTextRight = data['midLineTextRight'] != null ? data['midLineTextRight'] : '';
       lastLineTextLeft = data['lastLineTextLeft'] != null ? data['lastLineTextLeft'] : '';
       lastLineTextRight = data['lastLineTextRight'] != null ? data['lastLineTextRight'] : '';
+      if(data['background'] != null){
+        List<String> background = data['background'].toString().split(',');
+        colorRed = int.parse(background[0]);
+        colorGreen = int.parse(background[1]);
+        colorBlue = int.parse(background[2]);
+        colorOpacity = double.parse(background[3]);
+      }
     }
   }
 
   Widget get() {
+    String c = Colors.red.toString();
     return Container(
       margin: const EdgeInsets.only(top: 5, left: 10, bottom: 5, right: 10),
       padding: const EdgeInsets.all(10.0),
       color: Color.fromRGBO(colorRed, colorGreen, colorBlue, colorOpacity),
+//      color: (c as Colors),
       width: width,
       height: height,
       child: Column(
