@@ -98,7 +98,7 @@ class Kpi {
 
 
     width = MediaQuery.of(context).size.width;
-    firstLineIcon = Icon(firstLineIconPram, color: Colors.white,);
+    firstLineIcon = Icon(firstLineIconPram, color: Colors.white,   size: 40.0,);
 
     useData();
   }
