@@ -19,6 +19,7 @@ class Kpi {
   double colorOpacity;
 
   Icon firstLineIcon;
+  int rotateIcon = 0;
   String firstLineText;
 
   String midLineTextLeft;
@@ -26,6 +27,7 @@ class Kpi {
 
   String lastLineTextLeft;
   String lastLineTextRight;
+
 
   var data;
 
@@ -46,7 +48,7 @@ class Kpi {
     this.colorBlue: 63,
     this.colorOpacity: 1,
     this.height = 150,
-    firstLineIconPram = Icons.add,
+    firstLineIconPram = Icons.arrow_right,
     this.firstLineText = 'firstLineText',
     this.midLineTextLeft = '',
     this.midLineTextRight = 'midLineTextRight',
@@ -110,6 +112,12 @@ class Kpi {
       midLineTextRight = data['midLineTextRight'] != null ? data['midLineTextRight'] : '';
       lastLineTextLeft = data['lastLineTextLeft'] != null ? data['lastLineTextLeft'] : '';
       lastLineTextRight = data['lastLineTextRight'] != null ? data['lastLineTextRight'] : '';
+//      rotateIcon = data['rotateIcon'] != null ? int.parse(data['rotateIcon']) : '';
+//      print(int.parse(data['rotateIcon']));
+      String _rotateIcon = data['rotateIcon'];
+      if(_rotateIcon != null)
+        rotateIcon = int.parse(_rotateIcon);
+
       if(data['background'] != null){
         List<String> background = data['background'].toString().split(',');
         colorRed = int.parse(background[0]);
@@ -134,7 +142,11 @@ class Kpi {
         children: <Widget>[
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: <Widget>[firstLineIcon, Text(firstLineText, style: textStyle)],
+//            children: <Widget>[firstLineIcon, Text(firstLineText, style: textStyle)],
+            children: <Widget>[new RotationTransition(
+              turns: new AlwaysStoppedAnimation(rotateIcon / 360),
+              child: firstLineIcon,
+            ), Text(firstLineText, style: textStyle)],
           ),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,

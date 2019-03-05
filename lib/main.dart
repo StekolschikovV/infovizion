@@ -32,7 +32,7 @@ class _MyHomePageState extends State<MyHomePage> {
   int _counter = 0;
   String testData = '['
       '{ "background":"1,2,344,1","firstLineText": "Продажи", "midLineTextLeft":"", "midLineTextRight":"33.3 млн.руб","lastLineTextLeft":"105.3%","lastLineTextRight":"20.4 млн.руб"}, '
-      '{ "firstLineText": "john@example.com2"}, '
+      '{ "rotateIcon":"90","firstLineText": "john@example.com2"}, '
       '{ "firstLineText": "john@example.com3"}, '
       '{"icon": "33", "firstLineText": "john@example.com2"},'
       '{"icon": "33", "midLineTextLeft": "midLineTextLeft3"}'
