@@ -16,6 +16,7 @@ class MyApp extends StatelessWidget {
 class MyHomePage extends StatefulWidget {
   MyHomePage({Key key, this.title}) : super(key: key);
   final String title;
+
   @override
   _MyHomePageState createState() => _MyHomePageState();
 }
@@ -35,30 +36,48 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(
         title: Text(widget.title),
       ),
-      body: Center(
-
-        child: Column(
-
-          // horizontal).
-          mainAxisAlignment: MainAxisAlignment.start,
-          children: <Widget>[
-//            Kpi().build(context)
-          Kpi(context).get(),
-          Kpi(context, colorBlue: 500).get(),
-//            Container(
-//              margin: const EdgeInsets.all(10.0),
-//              color: const Color(0xFF00FF00),
-//              width: MediaQuery.of(context).size.width,
-//              height: 48.0,
-//            ),
-
-//            Text(
-//              '$_counter',
-//              style: Theme.of(context).textTheme.display1,
-//            ),
-          ],
+      body: SingleChildScrollView(
+        child: ConstrainedBox(
+          constraints: BoxConstraints(
+            minHeight: 200,
+          ),
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            children: <Widget>[
+              Kpi(context, colorBlue: 0).get(),
+              Kpi(context, colorRed: 500).get(),
+              Kpi(context, colorGreen: 500).get(),
+              Kpi(context, colorBlue: 1500).get(),
+              Kpi(context, colorBlue: 500).get(),
+            ],
+          ),
         ),
-      ),
+      )
+//      body: Center(
+//
+//        child: Column(
+//
+//          // horizontal).
+//          mainAxisAlignment: MainAxisAlignment.start,
+//          children: <Widget>[
+////            Kpi().build(context)
+//          Kpi(context).get(),
+//          Kpi(context, colorBlue: 500).get(),
+////            Container(
+////              margin: const EdgeInsets.all(10.0),
+////              color: const Color(0xFF00FF00),
+////              width: MediaQuery.of(context).size.width,
+////              height: 48.0,
+////            ),
+//
+////            Text(
+////              '$_counter',
+////              style: Theme.of(context).textTheme.display1,
+////            ),
+//          ],
+//        ),
+//      ),
 //      floatingActionButton: FloatingActionButton(
 //        onPressed: _incrementCounter,
 //        tooltip: 'Increment',
