@@ -1,15 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:infovizion/widgets/kpi/kpi.dart';
 import 'dart:convert';
+import 'package:infovizion/menu.dart';
 
-class Page1 extends StatefulWidget{
-  Page1({Key key, this.title}) : super(key: key);
+class PageKpi extends StatefulWidget {
+  PageKpi({Key key, this.title}) : super(key: key);
   final String title;
   @override
-  _Page1 createState() => _Page1();
+  _PageKpi createState() => _PageKpi();
 }
 
-class _Page1 extends State<Page1> {
+class _PageKpi extends State<PageKpi> {
   int _counter = 0;
   String testData = '['
       '{ "background":"27,161,226,1","firstLineText": "Продажи", "midLineTextLeft":"", "midLineTextRight":"33.3 млн.руб","lastLineTextLeft":"105.3%","lastLineTextRight":"20.4 млн.руб"}, '
@@ -48,25 +49,25 @@ class _Page1 extends State<Page1> {
 
   @override
   Widget build(BuildContext context) {
-
     List<Widget> kpiList = [];
     List dataList = jsonDecode(testData);
 
-    dataList.forEach((e){
-      kpiList.add( Kpi(context, data: e).get());
+    dataList.forEach((e) {
+      kpiList.add(Kpi(context, data: e).get());
     });
 
     return Scaffold(
         appBar: AppBar(
           title: Text(widget.title),
         ),
+        drawer: Menu(),
         body: SingleChildScrollView(
           child: ConstrainedBox(
             constraints: BoxConstraints(
               minHeight: 200,
             ),
             child: new GestureDetector(
-              onTap: (){
+              onTap: () {
                 Navigator.pushNamed(context, '/page2');
               },
               child: Column(
@@ -76,7 +77,6 @@ class _Page1 extends State<Page1> {
               ),
             ),
           ),
-        )
-    );
+        ));
   }
 }
