@@ -13,6 +13,7 @@ environment:
   sdk: ">=2.1.0 <3.0.0"
 
 dependencies:
+  charts_flutter: ^0.6.0
   json_to_form: "^0.0.1"
   flutter:
     sdk: flutter
