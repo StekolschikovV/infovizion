@@ -129,7 +129,6 @@ class Kpi {
   }
 
   Widget get() {
-    String c = Colors.red.toString();
     return Container(
       margin: const EdgeInsets.only(top: 5, left: 10, bottom: 5, right: 10),
       padding: const EdgeInsets.all(10.0),

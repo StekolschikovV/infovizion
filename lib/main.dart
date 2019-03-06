@@ -15,7 +15,11 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'infovizion',
-      home: MyHomePage(title: 'infovizion Demo Home Page3'),
+      initialRoute: '/',
+      routes: {
+        '/': (context) => MyHomePage(title: 'page 1'),
+        '/two': (context) => MyHomePage(title: 'page 2'),
+      },
     );
   }
 }
@@ -85,62 +89,18 @@ class _MyHomePageState extends State<MyHomePage> {
           constraints: BoxConstraints(
             minHeight: 200,
           ),
-          child: Column(
-            mainAxisSize: MainAxisSize.min,
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
-            children: kpiList,
-//            children: <Widget>[
-////              Kpi(context, colorBlue: 0).get(),
-//              Kpi(context, colorRed: 500, data: dataList[0]).get(),
-//              Kpi(context, colorRed: 500, data: dataList[1]).get(),
-//              Kpi(context, colorRed: 500, data: dataList[2]).get(),
-//              Kpi(context, colorRed: 500, data: dataList[3]).get(),
-////              Kpi(context, colorGreen: 500).get(),
-////              Kpi(context, colorBlue: 1500).get(),
-////              Kpi(context, colorBlue: 500).get(),
-//            ],
+          child: new GestureDetector(
+            onTap: (){
+              Navigator.pushNamed(context, '/two');
+            },
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children: kpiList,
+            ),
           ),
         ),
       )
-//      body: Center(
-//
-//        child: Column(
-//
-//          // horizontal).
-//          mainAxisAlignment: MainAxisAlignment.start,
-//          children: <Widget>[
-////            Kpi().build(context)
-//          Kpi(context).get(),
-//          Kpi(context, colorBlue: 500).get(),
-////            Container(
-////              margin: const EdgeInsets.all(10.0),
-////              color: const Color(0xFF00FF00),
-////              width: MediaQuery.of(context).size.width,
-////              height: 48.0,
-////            ),
-//
-////            Text(
-////              '$_counter',
-////              style: Theme.of(context).textTheme.display1,
-////            ),
-//          ],
-//        ),
-//      ),
-//      floatingActionButton: FloatingActionButton(
-//        onPressed: _incrementCounter,
-//        tooltip: 'Increment',
-//        child: Icon(Icons.add),
-//      ), // This trailing comma makes auto-formatting nicer for build methods.
     );
   }
 }
-
-
-//String testData = '['
-//    '{ "firstLineText": "john@example.com1"}, '
-//    '{ "firstLineText": "john@example.com1"}, '
-//    '{ "firstLineText": "john@example.com1"}, '
-//    '{"icon": "33", "firstLineText": "john@example.com2"},'
-//    '{"icon": "33", "midLineTextLeft": "midLineTextLeft3"}'
-//
-//    ']';
