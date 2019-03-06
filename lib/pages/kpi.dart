@@ -68,7 +68,7 @@ class _PageKpi extends State<PageKpi> {
             ),
             child: new GestureDetector(
               onTap: () {
-                Navigator.pushNamed(context, '/page2');
+                Navigator.pushNamed(context, '/chart');
               },
               child: Column(
                 mainAxisSize: MainAxisSize.min,
