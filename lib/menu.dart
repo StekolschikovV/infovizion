@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-
 class Menu extends StatefulWidget {
   Menu({Key key, this.title}) : super(key: key);
   final String title;
@@ -17,10 +16,10 @@ class _Menu extends State<Menu> {
         padding: EdgeInsets.zero,
         children: <Widget>[
           DrawerHeader(
-//            child: Text('Drawer Header'),
-            child: Image.network(
-              'https://infovizion.ru/uploads/s/t/6/p/t6pofgmaftdy/img/EOTTQBvK.png',
-            ),
+            child: Image.asset('assets/login_icon.png'),
+//            child: Image.network(
+//              'https://infovizion.ru/uploads/s/t/6/p/t6pofgmaftdy/img/EOTTQBvK.png',
+//            ),
             decoration: BoxDecoration(
               color: Colors.blue,
             ),
@@ -30,7 +29,7 @@ class _Menu extends State<Menu> {
           ListTile(
             title: Text('KPI'),
             onTap: () {
-              Navigator.pushNamed(context, '/');
+              Navigator.pushNamed(context, '/kpi');
             },
           ),
           ListTile(
@@ -39,7 +38,12 @@ class _Menu extends State<Menu> {
               Navigator.pushNamed(context, '/chart');
             },
           ),
-
+          ListTile(
+            title: Text('Выход'),
+            onTap: () {
+              Navigator.pushNamed(context, '/');
+            },
+          ),
         ],
       ),
     );

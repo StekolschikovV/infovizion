@@ -7,19 +7,18 @@ import 'package:infovizion/bar_chart/stacked_horizontal.dart';
 import 'package:infovizion/pie_chart/donut.dart';
 import 'package:infovizion/menu.dart';
 
-class PageChart extends StatefulWidget {
-  PageChart({Key key, this.title}) : super(key: key);
+class ChartPage extends StatefulWidget {
+  ChartPage({Key key, this.title}) : super(key: key);
   final String title;
 
   @override
-  _PageChart createState() => _PageChart();
+  _ChartPage createState() => _ChartPage();
 }
 
-class _PageChart extends State<PageChart> {
+class _ChartPage extends State<ChartPage> {
   @override
   Widget build(BuildContext context) {
     num width = MediaQuery.of(context).size.width;
-
     return Scaffold(
         appBar: AppBar(
           title: Text(widget.title),

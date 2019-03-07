@@ -3,14 +3,14 @@ import 'package:infovizion/widgets/kpi/kpi.dart';
 import 'dart:convert';
 import 'package:infovizion/menu.dart';
 
-class PageKpi extends StatefulWidget {
-  PageKpi({Key key, this.title}) : super(key: key);
+class KpiPage extends StatefulWidget {
+  KpiPage({Key key, this.title}) : super(key: key);
   final String title;
   @override
-  _PageKpi createState() => _PageKpi();
+  _KpiPage createState() => _KpiPage();
 }
 
-class _PageKpi extends State<PageKpi> {
+class _KpiPage extends State<KpiPage> {
   int _counter = 0;
   String testData = '['
       '{ "background":"27,161,226,1","firstLineText": "Продажи", "midLineTextLeft":"", "midLineTextRight":"33.3 млн.руб","lastLineTextLeft":"105.3%","lastLineTextRight":"20.4 млн.руб"}, '
