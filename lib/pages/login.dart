@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:infovizion/theme.dart';
+import 'dart:io';
 
 class LoginPage extends StatefulWidget {
   @override
@@ -63,7 +64,7 @@ class _LoginPageState extends State<LoginPage> {
               FlatButton(
                 child: Text('CANCEL'),
                 onPressed: () {
-                  Navigator.pushNamed(context, '/kpi');
+                  exit(0);
                 },
                 shape: new RoundedRectangleBorder(borderRadius: new BorderRadius.circular(10.0)),
               ),
@@ -74,7 +75,7 @@ class _LoginPageState extends State<LoginPage> {
                 onPressed: () {
                   Navigator.pushNamed(context, '/kpi');
                 },
-                elevation: 8.0,
+                elevation: 5.0,
                 shape: new RoundedRectangleBorder(borderRadius: new BorderRadius.circular(10.0)),
               )
             ],
