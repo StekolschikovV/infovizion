@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import './theme.dart';
 
 class Menu extends StatefulWidget {
   Menu({Key key, this.title}) : super(key: key);
@@ -17,11 +18,8 @@ class _Menu extends State<Menu> {
         children: <Widget>[
           DrawerHeader(
             child: Image.asset('assets/login_icon.png'),
-//            child: Image.network(
-//              'https://infovizion.ru/uploads/s/t/6/p/t6pofgmaftdy/img/EOTTQBvK.png',
-//            ),
             decoration: BoxDecoration(
-              color: Colors.blue,
+              color: blackColor,
             ),
             padding: const EdgeInsets.all(0),
             margin: const EdgeInsets.all(0),
