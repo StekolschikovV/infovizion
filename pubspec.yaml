@@ -59,6 +59,12 @@ flutter:
     - asset: assets/fonts/Lato-Regular.ttf
     - asset: assets/fonts/Lato-Bold.ttf
     - asset: assets/fonts/Lato-Black.ttf
+  - family: PT_Sans
+    fonts:
+    - asset: assets/fonts/PT_Sans-Web-Bold.ttf
+    - asset: assets/fonts/PT_Sans-Web-BoldItalic.ttf
+    - asset: assets/fonts/PT_Sans-Web-Italic.ttf
+    - asset: assets/fonts/PT_Sans-Web-Regular.ttf
   #   - family: Schyler
   #     fonts:
   #       - asset: fonts/Schyler-Regular.ttf

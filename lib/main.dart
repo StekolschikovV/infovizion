@@ -10,18 +10,24 @@ const myPrimaryColor = const Color(0xFFE91E63);
 final ThemeData myAppTheme = buildTheme();
 
 ThemeData buildTheme(){
-  final ThemeData base = ThemeData.light();
-  return base.copyWith(
-//    accentColor: mainColor,
+//  final ThemeData base = ThemeData.light();
+  return ThemeData(
     primaryColor: blackColor,
-//      buttonColor: Colors.red,
-//    backgroundColor: Colors.amber,
-////    scaffoldBackgroundColor: Colors.black,
-//    cardColor: Colors.blue,
-//    textSelectionColor: Colors.brown,
-//    errorColor:Colors.deepPurple,
+    fontFamily: 'PT_Sans',
     pageTransitionsTheme: PageTransitionsTheme(builders: {TargetPlatform.android: CupertinoPageTransitionsBuilder(),}),
   );
+//  return base.copyWith(
+////    accentColor: mainColor,
+//    primaryColor: blackColor,
+////      buttonColor: Colors.red,
+////    backgroundColor: Colors.amber,
+//////    scaffoldBackgroundColor: Colors.black,
+////    cardColor: Colors.blue,
+////    textSelectionColor: Colors.brown,
+////    errorColor:Colors.deepPurple,
+//
+//    pageTransitionsTheme: PageTransitionsTheme(builders: {TargetPlatform.android: CupertinoPageTransitionsBuilder(),}),
+//  );
 }
 
 class MyApp extends StatelessWidget {
