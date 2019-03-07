@@ -20,7 +20,7 @@ ThemeData buildTheme(){
 //    cardColor: Colors.blue,
 //    textSelectionColor: Colors.brown,
 //    errorColor:Colors.deepPurple,
-
+    pageTransitionsTheme: PageTransitionsTheme(builders: {TargetPlatform.android: CupertinoPageTransitionsBuilder(),}),
   );
 }
 
