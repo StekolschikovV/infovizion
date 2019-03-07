@@ -1,7 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:charts_flutter/flutter.dart';
-import './test.dart';
-import 'package:charts_flutter/flutter.dart' as charts;
 import 'package:infovizion/bar_chart/simple.dart';
 import 'package:infovizion/bar_chart/stacked_horizontal.dart';
 import 'package:infovizion/pie_chart/donut.dart';
